@@ -16,6 +16,7 @@ The design is verified through behavioral simulation using a custom slave model 
 
 
 🛠️ Tools & Hardware
+
 HDL: Verilog HDL
 
 EDA Tool: Xilinx Vivado 2025.1
@@ -27,6 +28,7 @@ External Peripheral: MPU-6050 (Accelerometer/Gyroscope)
 Pin Mapping: SDA (J13), SCL (J14), Clock (E3), Reset (C18)
 
 📊 Results & Outputs
+
 1. Simulation Result
 The RTL simulation verifies the write and read transactions. The waveform below shows the master writing 0xA5 to the slave and successfully reading it back, confirming protocol timing and data integrity.
 
@@ -38,6 +40,7 @@ The design achieved timing closure at 100 MHz with minimal resource utilization 
 https://docs/hardware_output.jpg
 
 🚀 Future Scope
+
 Multi-byte read/write transfers (Burst mode).
 
 Sub-address (Register) transmission for specific sensors.
@@ -49,6 +52,7 @@ Multi-master arbitration.
 Integration as an AXI4-Lite peripheral for System-on-Chip (SoC) designs.
 
 👨‍💻 Authors
+
 B. Siri (Roll No: 2411EC010067)
 
 K. Subhash (Roll No: 2411EC010077)
