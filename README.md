@@ -14,6 +14,49 @@ The design is verified through behavioral simulation using a custom slave model 
 *   **Open-Drain Modeling:** Utilizes Verilog tri-state logic (`1'bz`) to accurately simulate the wired-AND bus behavior.
 *   **Hardware Verified:** Successfully synthesized, implemented, and programmed onto the Arty S7-25 FPGA. Timing closure achieved at 100 MHz.
 
+
+🛠️ Tools & Hardware
+HDL: Verilog HDL
+
+EDA Tool: Xilinx Vivado 2025.1
+
+Target Board: Digilent Arty S7-25 (Spartan-7 XC7S25-CSGA324-1)
+
+External Peripheral: MPU-6050 (Accelerometer/Gyroscope)
+
+Pin Mapping: SDA (J13), SCL (J14), Clock (E3), Reset (C18)
+
+📊 Results & Outputs
+1. Simulation Result
+The RTL simulation verifies the write and read transactions. The waveform below shows the master writing 0xA5 to the slave and successfully reading it back, confirming protocol timing and data integrity.
+
+https://docs/waveform.png
+
+2. Hardware Implementation
+The design achieved timing closure at 100 MHz with minimal resource utilization (<1% LUTs). The bitstream was programmed onto the Arty S7-25, and I²C communication was physically verified using an MPU-6050 sensor connected to the shield header.
+
+https://docs/hardware_output.jpg
+
+🚀 Future Scope
+Multi-byte read/write transfers (Burst mode).
+
+Sub-address (Register) transmission for specific sensors.
+
+Repeated START condition support.
+
+Multi-master arbitration.
+
+Integration as an AXI4-Lite peripheral for System-on-Chip (SoC) designs.
+
+👨‍💻 Authors
+B. Siri (Roll No: 2411EC010067)
+
+K. Subhash (Roll No: 2411EC010077)
+
+Project Guide: Ms. S. Mrudhula (Assistant Professor)
+Department of Electronics and Communication Engineering
+School of Engineering, Malla Reddy University, Hyderabad, Telangana, India
+
 ## 📂 Repository Structure
 ```text
 ├── RTL/                     # Synthesizable Verilog source code
