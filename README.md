@@ -37,7 +37,7 @@ The RTL simulation verifies the write and read transactions. The waveform below 
 2. Hardware Implementation
 The design achieved timing closure at 100 MHz with minimal resource utilization (<1% LUTs). The bitstream was programmed onto the Arty S7-25, and I²C communication was physically verified using an MPU-6050 sensor connected to the shield header.
 
-![Hardware Output](Docs/hardware_output.jpg)
+![Hardware Output](Docs/hardware_output.jpg.png)
 
 
 🚀 Future Scope
