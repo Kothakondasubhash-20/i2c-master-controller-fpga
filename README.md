@@ -32,12 +32,13 @@ Pin Mapping: SDA (J13), SCL (J14), Clock (E3), Reset (C18)
 1. Simulation Result
 The RTL simulation verifies the write and read transactions. The waveform below shows the master writing 0xA5 to the slave and successfully reading it back, confirming protocol timing and data integrity.
 
-https://docs/waveform.png
+![Simulation Waveform](Docs/waveform.png)
 
 2. Hardware Implementation
 The design achieved timing closure at 100 MHz with minimal resource utilization (<1% LUTs). The bitstream was programmed onto the Arty S7-25, and I²C communication was physically verified using an MPU-6050 sensor connected to the shield header.
 
-https://docs/hardware_output.jpg
+![Hardware Output](Docs/hardware_output.jpg)
+
 
 🚀 Future Scope
 
